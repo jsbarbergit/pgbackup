@@ -7,11 +7,13 @@ name = "pypi"
 
 [packages]
 
+"boto3" = "*"
 
 
 [dev-packages]
 
 pytest = "*"
+pytest-mock = "*"
 
 
 [requires]
