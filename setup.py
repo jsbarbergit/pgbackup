@@ -11,8 +11,13 @@ setup(
     long_description=readme,
     author='John Barber',
     author_email='jsbarber@gmail.com',
-    install_requires=[],
+    install_requires=['boto3'],
     # Will recursively look through given dir for __init__.py to indicate req'd pkgs
     packages=find_packages('src'),
-    package_dir={'':'src'}
+    package_dir={'':'src'},
+    entry_points={
+        'console_scripts': [
+            'pgbackup = pgbackup.cli:main',
+            ]
+    }
 )
